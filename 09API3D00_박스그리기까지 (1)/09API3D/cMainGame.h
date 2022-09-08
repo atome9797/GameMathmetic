@@ -14,8 +14,8 @@ private:
 	HDC			m_MemDC;
 	HBITMAP		m_hOldBitmap, m_hBitmap;
 
-	std::vector<cVector3>	m_vecVertex;
-	std::vector<DWORD>		m_vecIndex;
+	std::vector<cVector3> m_vecVertex[4];
+	std::vector<DWORD>		m_vecIndex[4];
 	std::vector<cVector3>	m_vecLineVertex;
 
 	cMatrix					m_matWorld;
@@ -37,6 +37,7 @@ private:
 	cVector3				m_vAxisZTextPosition;
 
 	float					m_fBoxRotY;
+	float					m_fBoxRotX;
 	cVector3				m_vBoxDirection;
 
 public:
