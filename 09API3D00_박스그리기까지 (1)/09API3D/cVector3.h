@@ -23,6 +23,7 @@ public:
 	static cVector3 Cross(cVector3& v1, cVector3& v2);
 	float Length();
 	cVector3 Normalize();
+	cVector3 Normalize2();
 	/// : 벡터의 연산중 곱셈은 Dot 나 Cross로 대체 설명 가능하나
 	/// : 벡터끼리의 나누기는 개념이 없다.
 

@@ -322,6 +322,24 @@ cMatrix cMatrix::View(cVector3& vEye, cVector3& vLookAt, cVector3& vUp)
 	return matRet;
 }
 
+cMatrix cMatrix::View2(cVector3& vEye, cVector3& vLookAt, cVector3& vUp)
+{
+	cVector3 l = (vLookAt - vEye).Normalize2();
+	cVector3 r = cVector3::Cross(vUp, l).Normalize2();
+	cVector3 u = cVector3::Cross(l, r).Normalize2();
+
+	cMatrix matRet = cMatrix::Identity(4);
+	matRet[0][0] = r.x; matRet[0][1] = u.x; matRet[0][2] = l.x;		/// : [0]
+	matRet[1][0] = r.y; matRet[1][1] = u.y; matRet[1][2] = l.y;
+	matRet[2][0] = r.z; matRet[2][1] = u.z; matRet[2][2] = l.z;
+
+	matRet[3][0] = -cVector3::Dot(r, vEye);
+	matRet[3][1] = -cVector3::Dot(u, vEye);
+	matRet[3][2] = -cVector3::Dot(l, vEye);
+
+	return matRet;
+}
+
 cMatrix cMatrix::Projection(float fFovY, float fAspect, float fNearZ, float fFarZ)
 {
 	cMatrix matRet = cMatrix::Identity(4);
