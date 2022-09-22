@@ -1,12 +1,28 @@
 ﻿  cMainGame.cpp
-C:\metaverse_KYH\GameMathmetic\09API3D00_박스그리기까지 (1)\09API3D\cMainGame.cpp(230,54): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\metaverse_KYH\GameMathmetic\09API3D00_박스그리기까지 (1)\09API3D\cMainGame.cpp(230,44): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\metaverse_KYH\GameMathmetic\09API3D00_박스그리기까지 (1)\09API3D\cMainGame.cpp(270,30): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\metaverse_KYH\GameMathmetic\09API3D00_박스그리기까지 (1)\09API3D\cMainGame.cpp(270,24): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\metaverse_KYH\GameMathmetic\09API3D00_박스그리기까지 (1)\09API3D\cMainGame.cpp(271,28): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\metaverse_KYH\GameMathmetic\09API3D00_박스그리기까지 (1)\09API3D\cMainGame.cpp(271,22): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\metaverse_KYH\GameMathmetic\09API3D00_박스그리기까지 (1)\09API3D\cMainGame.cpp(272,28): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\metaverse_KYH\GameMathmetic\09API3D00_박스그리기까지 (1)\09API3D\cMainGame.cpp(272,22): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\metaverse_KYH\GameMathmetic\09API3D00_박스그리기까지 (1)\09API3D\cMainGame.cpp(273,28): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\metaverse_KYH\GameMathmetic\09API3D00_박스그리기까지 (1)\09API3D\cMainGame.cpp(273,22): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  09API3D.vcxproj -> C:\metaverse_KYH\GameMathmetic\09API3D00_박스그리기까지 (1)\x64\Debug\09API3D.exe
+C:\Metaverse_01\GameMathmetic\09API3D00_박스그리기까지 (1)\09API3D\cMainGame.cpp(267,54): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Metaverse_01\GameMathmetic\09API3D00_박스그리기까지 (1)\09API3D\cMainGame.cpp(267,44): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Metaverse_01\GameMathmetic\09API3D00_박스그리기까지 (1)\09API3D\cMainGame.cpp(307,30): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Metaverse_01\GameMathmetic\09API3D00_박스그리기까지 (1)\09API3D\cMainGame.cpp(307,24): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Metaverse_01\GameMathmetic\09API3D00_박스그리기까지 (1)\09API3D\cMainGame.cpp(308,28): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Metaverse_01\GameMathmetic\09API3D00_박스그리기까지 (1)\09API3D\cMainGame.cpp(308,22): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Metaverse_01\GameMathmetic\09API3D00_박스그리기까지 (1)\09API3D\cMainGame.cpp(309,28): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Metaverse_01\GameMathmetic\09API3D00_박스그리기까지 (1)\09API3D\cMainGame.cpp(309,22): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Metaverse_01\GameMathmetic\09API3D00_박스그리기까지 (1)\09API3D\cMainGame.cpp(310,28): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Metaverse_01\GameMathmetic\09API3D00_박스그리기까지 (1)\09API3D\cMainGame.cpp(310,22): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Metaverse_01\GameMathmetic\09API3D00_박스그리기까지 (1)\09API3D\cMainGame.cpp(342,30): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Metaverse_01\GameMathmetic\09API3D00_박스그리기까지 (1)\09API3D\cMainGame.cpp(342,24): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Metaverse_01\GameMathmetic\09API3D00_박스그리기까지 (1)\09API3D\cMainGame.cpp(343,28): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Metaverse_01\GameMathmetic\09API3D00_박스그리기까지 (1)\09API3D\cMainGame.cpp(343,22): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Metaverse_01\GameMathmetic\09API3D00_박스그리기까지 (1)\09API3D\cMainGame.cpp(344,28): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Metaverse_01\GameMathmetic\09API3D00_박스그리기까지 (1)\09API3D\cMainGame.cpp(344,22): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Metaverse_01\GameMathmetic\09API3D00_박스그리기까지 (1)\09API3D\cMainGame.cpp(345,28): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Metaverse_01\GameMathmetic\09API3D00_박스그리기까지 (1)\09API3D\cMainGame.cpp(345,22): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Metaverse_01\GameMathmetic\09API3D00_박스그리기까지 (1)\09API3D\cMainGame.cpp(376,29): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Metaverse_01\GameMathmetic\09API3D00_박스그리기까지 (1)\09API3D\cMainGame.cpp(376,23): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Metaverse_01\GameMathmetic\09API3D00_박스그리기까지 (1)\09API3D\cMainGame.cpp(377,27): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Metaverse_01\GameMathmetic\09API3D00_박스그리기까지 (1)\09API3D\cMainGame.cpp(377,21): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Metaverse_01\GameMathmetic\09API3D00_박스그리기까지 (1)\09API3D\cMainGame.cpp(378,27): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Metaverse_01\GameMathmetic\09API3D00_박스그리기까지 (1)\09API3D\cMainGame.cpp(378,21): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Metaverse_01\GameMathmetic\09API3D00_박스그리기까지 (1)\09API3D\cMainGame.cpp(379,27): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Metaverse_01\GameMathmetic\09API3D00_박스그리기까지 (1)\09API3D\cMainGame.cpp(379,21): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  09API3D.vcxproj -> C:\Metaverse_01\GameMathmetic\09API3D00_박스그리기까지 (1)\x64\Debug\09API3D.exe

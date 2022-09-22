@@ -9,6 +9,7 @@ cMainGame::cMainGame()
 	, m_vLookAt(0, 0, 0)
 	, m_vUp(0, 1, 0)
 	, m_vPosition(0, 0, 0)
+	, m_vPosition2(0, 0, 0)
 	//, m_fCameraDistance(5.0f)
 	//, m_isLButtonDown(false)
 	//, m_vCamRotAngle(0, 0, 0)
@@ -72,19 +73,43 @@ void cMainGame::Setup()
 	//m_vecVertex[1].push_back(cVector3(8.0f, -1.0f, 1.0f) * 0.5); //6
 
 
-	for (int i = 0; i < 2; i++) {
+	for (int i = 0; i < 5; i++) {
 
-		// : 버텍스 설정
-		m_vecVertex[i].push_back(cVector3(-1.0f + (i * 6.0f), -1.0f, -1.0f) * 0.5); //8
-		m_vecVertex[i].push_back(cVector3(-1.0f + (i * 6.0f), 1.0f, -1.0f) * 0.5);//4 
-		m_vecVertex[i].push_back(cVector3(1.0f + (i * 6.0f), 1.0f, -1.0f) * 0.5); //3
-		m_vecVertex[i].push_back(cVector3(1.0f + (i * 6.0f), -1.0f, -1.0f) * 0.5); //7
-		m_vecVertex[i].push_back(cVector3(-1.0f + (i * 6.0f), -1.0f, 1.0f) * 0.5); //5
-		m_vecVertex[i].push_back(cVector3(-1.0f + (i * 6.0f), 1.0f, 1.0f) * 0.5); //1
-		m_vecVertex[i].push_back(cVector3(1.0f + (i * 6.0f), 1.0f, 1.0f) * 0.5); //2
-		m_vecVertex[i].push_back(cVector3(1.0f + (i * 6.0f), -1.0f, 1.0f) * 0.5); //6
-
-
+		if (i < 2)
+		{
+			// : 버텍스 설정
+			m_vecVertex[i].push_back(cVector3(-1.0f + (i * 6.0f), -1.0f, -1.0f) * 0.5); //8
+			m_vecVertex[i].push_back(cVector3(-1.0f + (i * 6.0f), 1.0f, -1.0f) * 0.5);//4 
+			m_vecVertex[i].push_back(cVector3(1.0f + (i * 6.0f), 1.0f, -1.0f) * 0.5); //3
+			m_vecVertex[i].push_back(cVector3(1.0f + (i * 6.0f), -1.0f, -1.0f) * 0.5); //7
+			m_vecVertex[i].push_back(cVector3(-1.0f + (i * 6.0f), -1.0f, 1.0f) * 0.5); //5
+			m_vecVertex[i].push_back(cVector3(-1.0f + (i * 6.0f), 1.0f, 1.0f) * 0.5); //1
+			m_vecVertex[i].push_back(cVector3(1.0f + (i * 6.0f), 1.0f, 1.0f) * 0.5); //2
+			m_vecVertex[i].push_back(cVector3(1.0f + (i * 6.0f), -1.0f, 1.0f) * 0.5); //6
+		}
+		else if(i >= 2 && i < 4){
+			// : 버텍스 설정
+			m_vecVertex[i].push_back(cVector3(-1.0f + ((i - 2) * 6.0f), -1.0f, -1.0f) * 0.5); //8
+			m_vecVertex[i].push_back(cVector3(-1.0f + ((i - 2) * 6.0f), 1.0f, -1.0f) * 0.5);//4 
+			m_vecVertex[i].push_back(cVector3(1.0f + ((i - 2) * 6.0f), 1.0f, -1.0f) * 0.5); //3
+			m_vecVertex[i].push_back(cVector3(1.0f + ((i - 2) * 6.0f), -1.0f, -1.0f) * 0.5); //7
+			m_vecVertex[i].push_back(cVector3(-1.0f + ((i - 2) * 6.0f), -1.0f, 1.0f) * 0.5); //5
+			m_vecVertex[i].push_back(cVector3(-1.0f + ((i - 2) * 6.0f), 1.0f, 1.0f) * 0.5); //1
+			m_vecVertex[i].push_back(cVector3(1.0f + ((i - 2) * 6.0f), 1.0f, 1.0f) * 0.5); //2
+			m_vecVertex[i].push_back(cVector3(1.0f + ((i - 2) * 6.0f), -1.0f, 1.0f) * 0.5); //6
+		}
+		else
+		{
+			m_vecVertex[i].push_back(cVector3(-1.0f, 1.0f, -1.0f)); //8
+			m_vecVertex[i].push_back(cVector3(-1.0f, 2.0f, -1.0f) );//4 
+			m_vecVertex[i].push_back(cVector3(4.0f, 2.0f, -1.0f) ); //3
+			m_vecVertex[i].push_back(cVector3(4.0f, 1.0f, -1.0f)); //7
+			m_vecVertex[i].push_back(cVector3(-1.0f, 1.0f, 5.0f)); //5
+			m_vecVertex[i].push_back(cVector3(-1.0f, 2.0f, 5.0f) ); //1
+			m_vecVertex[i].push_back(cVector3(4.0f, 2.0f, 5.0f)); //2
+			m_vecVertex[i].push_back(cVector3(4.0f, 1.0f, 5.0f)); //6
+		}
+		
 		// : 인덱스 설정
 		m_vecIndex[i].push_back(0);
 		m_vecIndex[i].push_back(1);
@@ -136,7 +161,14 @@ void cMainGame::Setup()
 	}
 	
 	//항등행렬로 세팅
-	m_matWorld = cMatrix::Identity(4);
+	m_matWorld[0] = cMatrix::Identity(4);
+	m_matWorld[1] = cMatrix::Identity(4);
+
+	m_vPosition2.z += 5.0f;
+	m_matWorld[1] = cMatrix::Translation(m_vPosition2);
+
+	m_matWorld[2] = cMatrix::Identity(4);
+
 	m_matView = cMatrix::Identity(4);
 	m_matProj = cMatrix::Identity(4);
 	m_matViewport = cMatrix::Identity(4);
@@ -189,12 +221,15 @@ void cMainGame::Update()
 	{
 		m_fBoxRotX += 0.1f;
 		m_vPosition.z += 0.1f;
+		m_vPosition2.z += 0.1f;
 	}
 	if (GetKeyState('S') & 0x8000)
 	{
 		m_fBoxRotX -= 0.1f;
 		m_vPosition.z -= 0.1f;
+		m_vPosition2.z -= 0.1f;
 	}
+
 
 	// : 이동 시키기 
 	//Update_Move();	// : 나중에 추가 
@@ -223,7 +258,9 @@ void cMainGame::Update()
 	//m_vBoxDirection = cVector3::TransformNormal(m_vBoxDirection, matR);
 
 	// : 각 행렬 설정 하기.
-	m_matWorld = matR_X * matR_Y  * cMatrix::Translation(m_vPosition);
+	m_matWorld[0] = matR_X * matR_Y  * cMatrix::Translation(m_vPosition);
+	m_matWorld[1] = matR_X * matR_Y  * cMatrix::Translation(m_vPosition2);
+	m_matWorld[2] = cMatrix::Translation(m_vPosition);
 	m_matView = cMatrix::View(m_vEye, m_vLookAt, m_vUp);
 	m_matProj = cMatrix::Projection(PI / 2.0f,
 		rc.right / (float)rc.bottom, 1.0f, 1000.0f);
@@ -239,7 +276,7 @@ void cMainGame::Render(HDC hdc)
 	PatBlt(m_MemDC, rc.left, rc.top, rc.right, rc.bottom, WHITENESS);
 
 	// : Box 그리기..
-	cMatrix matWVP = m_matWorld * m_matView * m_matProj;
+	cMatrix matWVP = m_matWorld[0] * m_matView * m_matProj;
 	
 	for (size_t k = 0; k < 2; k++)
 	{
@@ -273,6 +310,76 @@ void cMainGame::Render(HDC hdc)
 			LineTo(m_MemDC, v1.x, v1.y);
 		}
 	}
+
+	cMatrix matWVP2 = m_matWorld[1] * m_matView * m_matProj;
+
+	for (size_t k = 2; k < 4; k++)
+	{
+		for (size_t i = 0; i < m_vecIndex[k].size(); i += 3)
+		{
+			cVector3 v1 = m_vecVertex[k][m_vecIndex[k][i]];
+			cVector3 v2 = m_vecVertex[k][m_vecIndex[k][i + 1]];
+			cVector3 v3 = m_vecVertex[k][m_vecIndex[k][i + 2]];
+
+			// 세 점을 프로젝션 스페이스로 이동
+			v1 = cVector3::TransformCoord(v1, matWVP2);
+			v2 = cVector3::TransformCoord(v2, matWVP2);
+			v3 = cVector3::TransformCoord(v3, matWVP2);
+
+			// : 안보이는 면 걸러내기..
+			/*
+				추가 예정..
+				if (IsBackFace(v1, v2, v3))
+					continue;
+			*/
+
+			// : 보이는 면에 한해 뷰포트 변환 실행
+			v1 = cVector3::TransformCoord(v1, m_matViewport);
+			v2 = cVector3::TransformCoord(v2, m_matViewport);
+			v3 = cVector3::TransformCoord(v3, m_matViewport);
+
+			// 삼각형 그리기.
+			MoveToEx(m_MemDC, v1.x, v1.y, NULL);
+			LineTo(m_MemDC, v2.x, v2.y);
+			LineTo(m_MemDC, v3.x, v3.y);
+			LineTo(m_MemDC, v1.x, v1.y);
+		}
+	}
+
+	cMatrix matWVP3 = m_matWorld[2] * m_matView * m_matProj;
+
+
+	for (size_t i = 0; i < m_vecIndex[4].size(); i += 3)
+	{
+		cVector3 v1 = m_vecVertex[4][m_vecIndex[4][i]];
+		cVector3 v2 = m_vecVertex[4][m_vecIndex[4][i + 1]];
+		cVector3 v3 = m_vecVertex[4][m_vecIndex[4][i + 2]];
+
+		// 세 점을 프로젝션 스페이스로 이동
+		v1 = cVector3::TransformCoord(v1, matWVP3);
+		v2 = cVector3::TransformCoord(v2, matWVP3);
+		v3 = cVector3::TransformCoord(v3, matWVP3);
+
+		// : 안보이는 면 걸러내기..
+		/*
+			추가 예정..
+			if (IsBackFace(v1, v2, v3))
+				continue;
+		*/
+
+		// : 보이는 면에 한해 뷰포트 변환 실행
+		v1 = cVector3::TransformCoord(v1, m_matViewport);
+		v2 = cVector3::TransformCoord(v2, m_matViewport);
+		v3 = cVector3::TransformCoord(v3, m_matViewport);
+
+		// 삼각형 그리기.
+		MoveToEx(m_MemDC, v1.x, v1.y, NULL);
+		LineTo(m_MemDC, v2.x, v2.y);
+		LineTo(m_MemDC, v3.x, v3.y);
+		LineTo(m_MemDC, v1.x, v1.y);
+	}
+
+
 	
 
 	// >> : 그리드 그리기
